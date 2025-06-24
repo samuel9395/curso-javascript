@@ -1,0 +1,39 @@
+/* Importa a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  outline: 0;
+}
+
+:root {
+  --primary-color: rgb(13, 12, 51);         /* Cor de fundo do body */
+  --text-color: rgb(199, 54, 109);          /* Cor padrão do texto */
+}
+
+body {
+  background-color: var(--primary-color);  /* Fundo escuro */
+  color: var(--text-color);                /* Texto com tom rosa claro */
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+section {
+  background-color: white;
+  padding: 10px;
+  width: 80vw;
+  text-align: center;
+  margin: 100px auto;
+}
+
+section h1 {
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+div.paragrafos p {
+  margin-bottom: 5px;
+}

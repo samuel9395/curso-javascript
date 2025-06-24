@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/iconeIMC.jpg" type="image/x-icon">
+    <title>IMC</title>
+</head>
+
+<body>
+
+    <section class="container">
+        <h1>Tabela IMC</h1>
+
+        <table>
+            <tr>
+                <th>IMC</th>
+                <th>RESULTADO</th>
+            </tr>
+            <tr>
+                <td>IMC abaixo de 18,5</td>
+                <td>Considerado abaixo do peso</td>
+            </tr>
+            <tr>
+                <td>IMC entre 18,5 e 24,9</td>
+                <td>Considerado peso normal</td>
+            </tr>
+            <tr>
+                <td>IMC entre 25 e 29,9</td>
+                <td>Considerado sobrepeso</td>
+            </tr>
+            <tr>
+                <td>IMC entre 30 e 34.9</td>
+                <td>Considerado obesidade grau° 1</td>
+            </tr>
+            <tr>
+                <td>IMC entre 35 e 39.9</td>
+                <td>Considerado obesidade grau° 2</td>
+            </tr>
+            <tr>
+                <td>IMC acima de 40</td>
+                <td>Considerado obesidade grau° 3</td>
+            </tr>
+        </table>
+        <p>
+
+        </p>
+
+        <form class="modelForm" action="" method="post">
+            <h1>Calcule seu IMC</h1>
+            <label for="input-peso">Peso</label>
+            <input type="number" class="input-peso">
+
+            <label for="input-altura">Altura</label>
+            <input type="text" class="input-altura">
+
+            <button type="submit" value="submit">Calcular</button>
+
+        </form>
+
+        <div id="resultado-imc"></div>
+
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+<!--
+        Para calcular o Índice de Massa Corporal (IMC), você precisa dividir o seu peso (em kg) pela sua altura (em metros) elevada ao quadrado. A fórmula é IMC = peso (kg) / (altura (m))^2. Por exemplo, se você pesa 70 kg e tem 1,75 m de altura, o cálculo seria: IMC = 70 / (1,75 * 1,75) = 22,86 kg/m². 
+
+        Passo a passo para calcular o IMC: 
+        Mida a sua altura: Meça a sua altura em metros. Por exemplo, se você tem 1,75 m, anote esse valor. 
+        Eleve a altura ao quadrado: Multiplique a sua altura por ela mesma. No exemplo, 1,75 * 1,75 = 3,0625. 
+        Meça o seu peso: Determine o seu peso em quilos (kg). 
+        Divida o peso pela altura ao quadrado: Divida o seu peso (em kg) pelo resultado do passo 2 (altura ao quadrado). No exemplo, 70 / 3,0625 = 22,86. 
+
+        IMC abaixo de 18,5: Considerado abaixo do peso.
+        IMC entre 18,5 e 24,9: Considerado peso normal.
+        IMC entre 25 e 29,9: Considerado sobrepeso.
+        IMC entre 30 e 34.9: Considerado obesidade grau° 1.
+        IMC entre 35 e 39,9: Considerado obesidade grau° 2.
+        IMC acima de 40: Considerado obesidade grau° 3.
+    -->
