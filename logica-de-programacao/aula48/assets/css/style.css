@@ -1,0 +1,76 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: cornflowerblue;
+}
+
+.container {
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+input.inputTarefa {
+    padding: 7px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button.btn {
+    margin-bottom: 15px;
+    padding: 7px;
+    border-radius: 15px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+ul {
+    background-color: cornflowerblue;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(100, 148, 237, 0.452);
+}
+
+li {
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 9px;
+}
+
+button.apagar {
+    position: fixed;
+    left: 80%;
+    font-weight: 800;
+    padding: 3px;    
+    border-radius: 5px;
+    margin-top: -3px;
+    cursor: pointer;
+}
