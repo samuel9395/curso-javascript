@@ -55,3 +55,64 @@ function funcao3(a, b = 2, c = 5) {
 // 💡 Como "pular" um valor e forçar uso do default?
 // ✅ Usar undefined explicitamente:
 funcao3(2, undefined, 20); // Saída: 17 → 2 + 2 (default) + 10 = 14
+
+// ✅ Função com desestruturação de objeto nos parâmetros
+// A função espera receber um objeto, e já desestrutura os valores nome, sobrenome e idade
+function objetoDesestruturado({ nome, sobrenome, idade }) {
+    console.log(nome, sobrenome, idade);
+}
+// Objeto que será passado para a função
+let objeto = {
+    nome: 'Samuel',
+    sobrenome: 'Bitencourt',
+    idade: 31
+}
+// Passa o objeto como argumento
+objetoDesestruturado(objeto);
+// Saída: Samuel Bitencourt 31
+// 🧠 Vantagens dessa abordagem:
+// Mais conciso: você não precisa acessar objeto.nome, objeto.sobrenome, etc.
+// Clareza: a função já deixa explícito o que ela espera receber.
+// Boa prática: muito usado em funções que lidam com configurações ou props (ex: em React).
+
+// ✅ Função com operador, acumulador e valores múltiplos (rest operator)
+const conta = function (operador, acumulador, ...numeros) {
+    // O parâmetro "...numeros" irá reunir todos os argumentos restantes em um array
+    // OBS: o rest operator deve ser o **último parâmetro** da função
+
+    for (let numero of numeros) {
+        // Executa a operação de acordo com o operador fornecido
+        if (operador === '+') acumulador += numero;
+        if (operador === '*') acumulador *= numero;
+        if (operador === '-') acumulador -= numero;
+        if (operador === '/') acumulador /= numero;
+    }
+    console.log(acumulador); // Mostra o resultado final
+}
+
+conta('+', 1, 20, 30, 40, 50);
+// 🧠 O que você aprendeu aqui:
+// | Conceito          | Explicação                                                                  |
+// | ----------------- | --------------------------------------------------------------------------- |
+// | `...numeros`      | Rest operator → agrupa argumentos restantes em um array                     |
+// | `for...of`        | Percorre os valores do array `numeros`                                      |
+// | Controle com `if` | Executa a operação conforme o operador (`+`, `-`, `*`, `/`)                 |
+// | Flexibilidade     | A função aceita qualquer número de valores (não precisa saber a quantidade) |
+
+// 💡 Alternativa mais robusta e legível
+const operacao = function (operador, acumulador, ...numeros) {
+    for (let numero of numeros) {
+        switch (operador) {
+            case '+': acumulador += numero; break;
+            case '-': acumulador -= numero; break;
+            case '*': acumulador *= numero; break;
+            case '/': acumulador /= numero; break;
+            default:
+                console.log('Operador inválido!');
+                return;
+        }
+    }
+
+    console.log(`Resultado: ${acumulador}`);
+};
+operacao('+', 1, 20, 30, 40, 50);
