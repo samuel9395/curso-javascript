@@ -1,3 +1,5 @@
+// ✅ ESSE ARQUIVO É APENAS PARA ALGUNS TESTE!!! ✅
+
 // 🔹 Calcular o fatorial de um número
 // Crie uma função chamada fatorial que receba um número inteiro e retorne o fatorial desse número.
 
@@ -81,12 +83,74 @@
 
 // console.log(getPrice('Queijo'));
 
-function ehPalindromo(palavra) {
+// function ehPalindromo(palavra) {
 
-    let invertida = palavra.split('').reverse().join('');
-    // Alternativa; return palavra === palavra.split('').reverse().join('');
-    return invertida === palavra;
+//     let invertida = palavra.split('').reverse().join('');
+//     // Alternativa; return palavra === palavra.split('').reverse().join('');
+//     return invertida === palavra;
+
+// }
+
+// console.log(ehPalindromo('radar'));
+
+// rl.question('Qual o seu nome? ', (nome) => {
+//     console.log('Nome: ', nome);
+//     rl.close();
+// })
+
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function telaInicial() {
+    console.log('*** BANCO SEM FUNDO ***');
+    console.log('-----------------------');
+    console.log('-----------------------\n');
+    console.log('*** TELA INICIAL ***');
+    console.log('--------------------\n');
 
 }
 
-console.log(ehPalindromo('radar'));
+telaInicial();
+
+function login() {
+    rl.question('*** DESEJA REALIZAR O LOGIN? ***\n1 - SIM | 2 - NÃO | 0 - SAIR\n', (login) => {
+        console.log('- OPÇÃO: ', login);
+        
+        if (login === '1') {
+            perguntaSenha();
+        } else if (login === '2') {
+            console.log('*** SAINDO... ***');
+            rl.close();
+        } else {
+            console.log('*** Opção inválida! ***');
+            rl.close();
+        }
+
+    });
+}
+login();
+
+function perguntaSenha() {
+    rl.question('- POR FAVOR DIGITE A SUA SENHA:', (senha) => {
+        if (senha === '1234') {
+            console.log('\n*** SALDO ***\n');
+            let saldo = 1000;
+            console.log('- SEU SALDO É DE', `R$${saldo},00 REAIS.\n`);
+            rl.close();
+        } else {
+            console.log('*** SENHA INCORRETA! ***');
+            perguntaSenha();
+        }
+
+    });
+}
+
+
+
+
+// node index.js
