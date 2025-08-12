@@ -1,4 +1,4 @@
-// Funções construtoras (contructor functions) ->
+// Funções construtoras (constructor functions) ->
 // Função fábrica -> objetos
 // Construtora -> Pessoa(new)
 
